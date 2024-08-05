@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    background-color: #222;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+
+    .header {
+        text-align: center;
+        text-transform: uppercase;
+        margin: 25px 0;
+
+    }
+
+    input {
+        width: 100%;
+        height: 50px;
+        border-radius: 6px;
+        padding: 5px;
+        background-color: #111;
+        border: none;
+        outline: none;
+        color: white;
+        font-size: 18px;
+        margin: 3px 0;
+        transition: all .3s ease-in;
+
+        &:focus {
+            border: 3px solid white;
+
+        }
+    }
+    .price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .price input {
+        width: calc(100% / 5);
+    }
+
+    
+    .create {
+        margin: 5px 0;
+        width: 170px;
+        background-color: #310044;
+        border: none;
+        height: 25px;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: all .3s;
+
+        &:hover {
+            background-color: #51045f;
+        }
+    }
+
+    .outputs {
+        display: flex;
+        flex-direction: column;
+        .deleteBtn{
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            order: 2;
+        }
+        button {
+            margin: 10px 0;
+            width: 170px;
+            background-color: #310044;
+            border: none;
+            height: 25px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all .3s;
+
+            &:hover {
+                background-color: #51045f;
+            }
+        }
+        .methods {
+            width: 50%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            order: 1;
+            
+        }
+        table{
+            order: 3;
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            border-collapse: collapse;
+            border: 1px solid #310044;
+            tr{
+                border: 1px solid #310044;
+                &:nth-child(odd){
+                    background-color: #310044;
+                }
+                &:nth-child(even){
+                    background-color: #51045f;
+                }
+            }
+          #update,#delete{
+            background-color: #310044;
+            border: none;
+            height: 35px;
+            width: 70px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all .3s;
+            &:hover {
+                background-color: #51045f;
+            }
+          }
+            th{
+                background-color: #310044;
+          }
+            td,th{
+                padding: 5px;
+            }
+        }
+    }
+}
+

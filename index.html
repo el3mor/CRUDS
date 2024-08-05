@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>CRUDS</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>crud</h2>
+        <p>Product Management System</p>
+      </div>
+      <div class="inputs">
+        <input type="text" id="title" placeholder="Title" />
+        <div class="price">
+          <input
+            oninput="getTotal()"
+            type="number"
+            id="price"
+            placeholder="Price"
+            min="0"
+          />
+          <input
+            oninput="getTotal()"
+            type="number"
+            id="taxes"
+            placeholder="Taxes"
+            min="0"
+          />
+          <input
+            oninput="getTotal()"
+            type="number"
+            id="ads"
+            placeholder="Ads"
+            min="0"
+          />
+          <input
+            oninput="getTotal()"
+            type="number"
+            id="discount"
+            placeholder="Discount"
+            min="0"
+          />
+          <div id="total">Total:<span></span></div>
+        </div>
+        <input type="number" id="count" placeholder="Count" />
+        <input type="text" id="category" placeholder="Category" />
+        <button class="create">Create</button>
+      </div>
+      <div class="outputs" id="outputs">
+        <div class="searchMethods">
+          <input onkeyup="searchProduct(this.value)" type="text" id="search" placeholder="Search" />
+          <div class="methods">
+            <button id="byTitle"  onclick="searchMood ='title'; getSearchMood()">Search By Title</button>
+            <button id="byCategory" onclick="searchMood ='category'; getSearchMood();  " >Search By Category</button>
+          </div>
+        </div>
+        <table>
+          <tr>
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>PRICE</th>
+            <th>TAXES</th>
+            <th>ADS</th>
+            <th>DISCOUNT</th>
+            <th>TOTAL</th>
+            <th>CATEGORY</th>
+            <th>UPDATE</th>
+            <th>DELETA</th>
+          </tr>
+          <tbody class="tbody">
+        
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
